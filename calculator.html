@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th, td {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let num1 = parseInt(document.getElementById("n1").value);
+            let num2 = parseInt(document.getElementById("n2").value);
+            let operator = document.getElementById("op").value;
+            let res;
+
+            switch(operator) {
+                case '+':
+                    res = num1 + num2;
+                    break;
+                case '-':
+                    res = num1 - num2;
+                    break;
+                case '*':
+                    res = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        alert("Division by zero is not allowed.");
+                        res = "";
+                    } else {
+                        res = num1 / num2;
+                    }
+                    break;
+                default:
+                    alert("Invalid operator! Please use +, -, *, or /.");
+                    res = "";
+            }
+
+            document.getElementById("rs").value = res;
+        }
+    </script>cvl
+</head>
+<body>
+    <h1 style="text-align: center;">Calculator</h1>
+    <table>
+        <tr>
+            <td>Enter First Number:</td>
+            <td><input type="text" name="num1" id="n1"></td>
+        </tr>
+        <tr>
+            <td>Enter Second Number:</td>
+            <td><input type="text" name="num2" id="n2"></td>
+        </tr>
+        <tr>
+            <td>Enter Operator (+, -, *, /):</td>
+            <td><input type="text" name="operator" id="op"></td>
+        </tr>
+        <tr>
+            <td>Result:</td>
+            <td><input type="text" name="res" id="rs" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="button" value="Calculate" onclick="calculate()">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

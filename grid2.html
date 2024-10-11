@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        border: 2px solid black;
+        padding: 10px;
+        column-gap: 2px;
+        row-gap: 2px;
+        background-color:rgb(30, 30, 147);
+    }
+    .item1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        border: 2px solid black;
+        padding: 22px;
+        background-color:rgb(53, 122, 161);
+        text-align: center;
+        color: white;
+        font-weight: 12px;
+        font-size: large;
+    }
+    .item2{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        border: 2px solid black;
+        padding: 22px;
+        background-color:rgb(53, 122, 161);
+        text-align: center;
+        color: white;
+        font-weight: 12px;
+        font-size: large;
+    }
+    .item3{
+        grid-column-start:2;
+        grid-column-end: 3;
+        border: 2px solid black;
+        padding: 22px;
+        background-color:rgb(53, 122, 161);
+        text-align: center;
+        color: white;
+        font-weight: 12px;
+        font-size: large;
+    }
+    .item4{
+        grid-column-start:3;
+        grid-column-end: 4;
+        border: 2px solid black;
+        padding: 22px;
+        background-color:rgb(53, 122, 161);
+        text-align:center;
+        color: white;
+        font-weight: 12px;
+        font-size: large;
+    }
+    .item5{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        border: 2px solid black;
+        padding: 22px;
+        background-color:rgb(53, 122, 161);
+        text-align: center;
+        color: white;
+        font-weight: 12px;
+        font-size: large;
+    }
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+
+    </div>
+</body>
+</html>

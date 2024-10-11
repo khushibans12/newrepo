@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {};
+        person.name="Abc";
+        person.nationality="Indian";
+        person.car = {
+            carname:"xyz",
+            year:"2024",
+            model:"BMW"
+
+        }
+        document.write("My full name is : "+person.name+" and my nationality is"+" "+person.nationality + " " +"<br>" + "My carname is : " + person.car.carname + " "+ "year of the car : "+ person.car.year + " " + "and it's model : "+ " "+person.car.model);
+
+        class Complex{
+            constructor(real,imag){
+                this.real = real;
+                this.imag = imag;
+            }
+            display(){
+                return(this.real+ "+"+this.imag+"i");
+            }
+        }
+        let x = new Complex(2,3);
+        document.write("<br>"+"complex number:"+" "+x.display());
+    </script>
+</body>
+</html>

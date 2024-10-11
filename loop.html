@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <h1>Multiplication Table Generator</h1>
+    
+    <button onclick="generateTable()">Generate Table</button>
+    
+    <script>
+        function generateTable() {
+            // Get user input
+            let number = parseInt(prompt("Enter the number you want to print the table of:"));
+            let limit = parseInt(prompt("Enter the number up to which you want the table:"));
+            
+            // Check if input is valid
+            if (isNaN(number) || isNaN(limit)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+
+            // Generate the table and show the result
+            let result = "";
+            for (let i = 1; i <= limit; i++) {
+                result += `${number} x ${i} = ${number * i}\n`;
+            }
+
+            // Show the result using alert
+            alert(result);
+        }
+    </script>
+</body>
+</html>

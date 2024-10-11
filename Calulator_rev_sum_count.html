@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="23sep.js"></script>
+    <style>
+        table{
+            border: 2px solid black;
+           
+        }
+        td{
+            border: 2px solid black;
+           
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript functions</h1>
+    <table>
+        <tr>
+            <td>Enter a number</td>
+            <td>
+                
+                <input type="text" id="num1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            No. of digits
+        </td>
+        <td>
+            <input type="text" id="count">
+        </td>
+        <tr>
+            <td>
+            Sum of digit
+            </td>
+            <td>
+                <input type="text" id="sum">
+            </td>
+
+        </tr>
+        <tr>
+            <td>Reverse of a digit</td>
+            <td>
+                <input type="text" id="rev">
+            </td>
+        </tr>
+        <tr>
+0            <td>
+                <input type="button" value="Calculate" onclick="Calculate()">
+            </td>
+        </tr>
+    </table>
+   
+
+</body>
+<script>
+    function Calculate(){
+        let num = document.getElementById("num1").value;
+        let count = CountDigit(num);
+        let sum = sumdigit(num);
+        let rev = reverse(num);
+
+        document.getElementById("count").value = count;
+        document.getElementById("sum").value = sum;
+        document.getElementById("rev").value = rev;
+    } 
+</script>
+</html>

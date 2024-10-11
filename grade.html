@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="http://www.nmiet.ac.in/">
+    <script>
+        function calculateResults() {
+            // Get the values entered by the user
+            let colorMarks = parseFloat(document.getElementById("colorMarks").value);
+            let typeMarks = parseFloat(document.getElementById("typeMarks").value);
+            let uxMarks = parseFloat(document.getElementById("uxMarks").value);
+            let uiMarks = parseFloat(document.getElementById("uiMarks").value);
+            
+            // Calculate total marks obtained
+            let totalObtained = colorMarks + typeMarks + uxMarks + uiMarks;
+            // Calculate total marks (assuming each subject has 100 marks)
+            let totalMarks = 400;
+            // Calculate percentage
+            let percentage = (totalObtained / totalMarks) * 100;
+            // Determine grade based on percentage
+            let grade;
+            if (percentage >= 90) {
+                grade = 'A';
+            } else if (percentage >= 80) {
+                grade = 'B';
+            } else if (percentage >= 70) {
+                grade = 'C';
+            } else if (percentage >= 60) {
+                grade = 'D';
+            } else {
+                grade = 'F';
+            }
+            
+            // Display results
+            document.getElementById("totalObtained").innerText = totalObtained;
+            document.getElementById("percentage").innerText = percentage.toFixed(2) + "%";
+            document.getElementById("grade").innerText = grade;
+        }
+    </script>
+</head>
+<body>
+    <a href="aboutnmiet.html">About</a>
+    <a href="/ourmentors.html">Mentors</a>
+    <br>
+    <br>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNHpLxrqznp6uZ0FOfuFxmo0QXwy98fEHn4g&s" width="400" height="200">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Enter Marks to Calculate Results</h1>
+    <table border="1">
+        <tr>
+            <td colspan="2">Subject</td>
+            <td>Marks Obtained</td>
+            <td>Total Marks</td>
+        </tr>
+        <tr>
+            <td colspan="2">Color</td>
+            <td><input type="number" id="colorMarks" min="0" max="100"></td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td colspan="2">Type</td>
+            <td><input type="number" id="typeMarks" min="0" max="100"></td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td colspan="2">UX</td>
+            <td><input type="number" id="uxMarks" min="0" max="100"></td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td colspan="2">UI</td>
+            <td><input type="number" id="uiMarks" min="0" max="100"></td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Total Obtained</b></td>
+            <td id="totalObtained">0</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Percentage</b></td>
+            <td id="percentage">0%</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Grade</b></td>
+            <td id="grade">N/A</td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculateResults()">Calculate</button>
+</body>
+</html>

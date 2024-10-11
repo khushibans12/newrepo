@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="for.js"></script>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        border: 2px solid black;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        background-color: rgb(187, 130, 130);
+    }
+    .box1{
+        margin: 150px;
+        padding: 150px;
+        border: 2px solid black;
+        text-align: center;
+        background-color: wheat;
+        border-radius: 50px;
+        border: none;
+        /* width: 10em; */
+
+    }
+    .bo{
+        border: 2px solid black;
+       padding: 12px;
+        display: flex;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        font-style: normal;
+        font-family:cursive;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+</style>
+<body>
+    <form>
+        
+        <div class="container">
+        <div class="box1">
+            <div class="bo">
+            Login<br>
+            </div>
+        <label for = "email" style="font-family: cursive;">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="email" id="email" style="border-radius: 12px; border: none;">
+        <br><br>
+        <label for = "password" style="font-family: cursive;">Password</label>
+        <input type = "password" style="border-radius: 12px; border: none;" ><br>
+        <br>
+        <button type="button" style="width: 245px; background-color: rgb(224, 194, 123); border: none; height: 20px; border-radius: 12px; border: none;"><b>LOGIN</b></button>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
